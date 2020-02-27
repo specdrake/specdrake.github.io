@@ -4,7 +4,10 @@ body {
 h1 {
   text-align: center;
 }
+hr {
+  height: 12px;
+}
 p {
   text-align: center;
-  text-size: 20px;
+  text-size: 30px;
 }
