@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Hooda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #222;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            flex-shrink: 0;
+        }
+        .footer-text {
+            font-size: 14px;
+        }
+        .project-spotlight {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .project-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .refresh-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+	a {
+	    color: white;
+	}
+	a:visited {
+	    color: white;
+	}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Anurag Hooda</h1>
+        <p>Software & ML Engineer</p>
+        <p><a href="mailto:anuraghooda.dtu@gmail.com">Contact Me</a></p>
+        <p><a href="https://github.com/specdrake" target="_blank">Github</a> | <a href="https://www.linkedin.com/in/anuraghooda" target="_blank">Linkedin</a> | <a href="https://docs.google.com/document/d/1tbVBGeyFq7fmbI5tyhP07lGWD_Pz6hMp/edit?usp=sharing&ouid=109716343111833795613&rtpof=true&sd=true" target="_blank">Resume</a></p>
+    </header>
+    <div class="container">
+        <section class="section">
+            <h2>About Me</h2>
+            <p>I am a highly motivated software and machine learning engineer with a strong background in Computer Science and Engineering. Throughout my academic and professional journey, I have demonstrated a keen interest in cutting-edge technologies and a passion for solving complex problems. With extensive experience in software development and machine learning, I thrive in dynamic environments and excel at delivering robust and scalable solutions that drive business growth and impact.</p>
+        </section>
+        <section class="section">
+            <h2>Skills</h2>
+	    <p>I am proficient in various programming languages including <strong>C, C++, Python, Go, Javascript, Haskell and Rust</strong>. My expertise extends to frameworks such as Django, React, Pandas, Numpy, Matplotlib, and Bootstrap. I have experience with Bash/Linux, CSS, HTML, SQL, Git, and Latex. Continuously learning and adapting to new technologies, I am dedicated to solving complex problems and delivering innovative solutions.</p>
+        </section>
+        <section class="section">
+            <div class="project-spotlight" id="projectSpotlight">
+                <h2>Project Spotlight</h2>
+                <p id="projectName">LoCoWin: Mobile Vaccine Delivery System</p>
+                <p id="projectDescription">Made using Django(Django REST Framework) and React, it decides the optimal route for mobile vaccination vans using the user location data and provides a user-friendly UI. I mainly worked on the backend server and deployment.</p>
+                <span class="refresh-icon" onclick="showRandomProject()">🔄</span>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p class="footer-text">&copy; 2024 Anurag Hooda</p>
+    </footer>
+    <script>
+        const projects = [
+            {
+                name: "LoCoWin: Mobile Vaccine Delivery System",
+                description: "Made using Django(Django REST Framework) and React, it decides the optimal route for mobile vaccination vans using the user location data and provides a user-friendly UI. I mainly worked on the backend server and deployment."
+            },
+            {
+                name: "DTU-VLAB: A Virtual Electronics Lab",
+                description: "Made using the Django framework, PySpice, Plotly, Pandas, JavaScript, and Bootstrap. Also, Includes an API which renders simulation output from server to the client and provides a simple and responsive UI for better accessibility and clean functionality."
+            },
+            {
+                name: "Summer Intern, DRDO SSPL, Delhi",
+                description: "Worked on developing a secure platform for one-to-one and group encrypted audio, video, and text communications using Go and React."
+            }
+            // Add more projects here
+        ];
+
+        function showRandomProject() {
+            const randomIndex = Math.floor(Math.random() * projects.length);
+            const randomProject = projects[randomIndex];
+            document.getElementById("projectName").textContent = randomProject.name;
+            document.getElementById("projectDescription").textContent = randomProject.description;
+        }
+    </script>
+</body>
+</html>
